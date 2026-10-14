@@ -2,15 +2,15 @@
 function scr_income() {
     // Determines income
 
-    income_base = 32;
+    income_base = 64;
     income_tribute = 0;
     if (obj_ini.fleet_type != ePLAYER_BASE.HOME_WORLD) {
-        income_base = 40;
+        income_base = 80;
     }
 
     income_home = 0;
     if (obj_ini.fleet_type == ePLAYER_BASE.HOME_WORLD) {
-        income_home = 8;
+        income_home = 16;
     } // Homeworld-based income
 
     income_fleet = 0;
@@ -137,10 +137,10 @@ function scr_income() {
                 for (var i = 1; i <= 4; i++) {
                     if ((mine.p_owner[i] == eFACTION.IMPERIUM) || (mine.p_owner[i] == eFACTION.MECHANICUS)) {
                         if ((mine.p_type[i] == "Desert") || (mine.p_type[i] == "Temperate")) {
-                            obj_controller.income_home += 2 * capital_number;
+                            obj_controller.income_home += 4 * capital_number;
                         }
                         if ((mine.p_type[i] == "Forge") || (mine.p_type[i] == "Hive")) {
-                            obj_controller.income_home += 4 * capital_number;
+                            obj_controller.income_home += 8 * capital_number;
                         }
                     }
                 }
@@ -154,13 +154,13 @@ function scr_income() {
                 if (planet_feature_bool(p_feature[o], eP_FEATURES.MONASTERY) == 0) {
                     obj_controller.income_tribute += 1;
                     if (p_type[o] == "Feudal") {
-                        obj_controller.income_tribute += 1;
-                    }
-                    if ((p_type[o] == "Desert") || (p_type[o] == "Temperate")) {
                         obj_controller.income_tribute += 2;
                     }
+                    if ((p_type[o] == "Desert") || (p_type[o] == "Temperate")) {
+                        obj_controller.income_tribute += 4;
+                    }
                     if ((p_type[o] == "Forge") || (p_type[o] == "Hive")) {
-                        obj_controller.income_tribute += 3;
+                        obj_controller.income_tribute += 6;
                     }
                 }
             }
