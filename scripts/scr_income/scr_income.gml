@@ -2,10 +2,10 @@
 function scr_income() {
     // Determines income
 
-    income_base = 64;
+    income_base = 80;
     income_tribute = 0;
     if (obj_ini.fleet_type != ePLAYER_BASE.HOME_WORLD) {
-        income_base = 80;
+        income_base = 120;
     }
 
     income_home = 0;
