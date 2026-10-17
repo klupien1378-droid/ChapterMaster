@@ -271,7 +271,7 @@ function new_player_ship(type, start_loc = "home", new_name = "") {
         obj_ini.ship_turning[index] = 45;
         obj_ini.ship_front_armour[index] = 6;
         obj_ini.ship_other_armour[index] = 6;
-        obj_ini.ship_weapons[index] = 8;
+        obj_ini.ship_weapons[index] = 6;
         obj_ini.ship_shields[index] = 24;
         obj_ini.ship_wep[index][1] = "Weapons Battery";
         obj_ini.ship_wep_facing[index][1] = "left";
