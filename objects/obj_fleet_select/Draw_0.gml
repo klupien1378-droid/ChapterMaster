@@ -131,7 +131,7 @@ if (!instance_exists(obj_drop_select) && !instance_exists(obj_bomb_select)) {
                 }
                 eta += speed_string;
 
-                draw_text_transformed(sys.x + 17, sys.y, string_hash_to_newline(eta), scale, scale, 0);
+                draw_text_transformed_outline(sys.x + 17, sys.y, string_hash_to_newline(eta), scale, scale, 0);
                 if (mouse_check_button(mb_right) && viable) {
                     if (obj_controller.menu == eMENU.TURN_END && instance_exists(obj_popup) && obj_popup.type == 99) {
                         player_retreat_from_fleet_combat(sys);
