@@ -288,7 +288,10 @@ function new_player_ship(type, start_loc = "home", new_name = "") {
         obj_ini.ship_wep[index][5] = "Macro Bombardment Cannons";
         obj_ini.ship_wep_facing[index][5] = "most";
         obj_ini.ship_wep_condition[index][5] = "";
-        obj_ini.ship_capacity[index] = 800;
+        obj_ini.ship_wep[index][6] = "Lance Battery";
+        obj_ini.ship_wep_facing[index][6] = "most";
+        obj_ini.ship_wep_condition[index][6] = "";
+        obj_ini.ship_capacity[index] = 1000;
         obj_ini.ship_carrying[index] = 0;
         obj_ini.ship_contents[index] = "";
         obj_ini.ship_turrets[index] = 6;
@@ -303,7 +306,7 @@ function new_player_ship(type, start_loc = "home", new_name = "") {
         obj_ini.ship_turning[index] = 90;
         obj_ini.ship_front_armour[index] = 8;
         obj_ini.ship_other_armour[index] = 8;
-        obj_ini.ship_weapons[index] = 4;
+        obj_ini.ship_weapons[index] = 5;
         obj_ini.ship_shields[index] = 12;
         obj_ini.ship_wep[index][1] = "Weapons Battery";
         obj_ini.ship_wep_facing[index][1] = "left";
@@ -314,10 +317,13 @@ function new_player_ship(type, start_loc = "home", new_name = "") {
         obj_ini.ship_wep[index][3] = "Thunderhawk Launch Bays";
         obj_ini.ship_wep_facing[index][3] = "special";
         obj_ini.ship_wep_condition[index][3] = "";
-        obj_ini.ship_wep[index][4] = "Bombardment Cannons";
-        obj_ini.ship_wep_facing[index][4] = "most";
+        obj_ini.ship_wep[index][4] = "Torpedo Tubes";
+        obj_ini.ship_wep_facing[index][4] = "front";
         obj_ini.ship_wep_condition[index][4] = "";
-        obj_ini.ship_capacity[index] = 400;
+        obj_ini.ship_wep[index][5] = "Bombardment Cannons";
+        obj_ini.ship_wep_facing[index][5] = "most";
+        obj_ini.ship_wep_condition[index][5] = "";
+        obj_ini.ship_capacity[index] = 500;
         obj_ini.ship_carrying[index] = 0;
         obj_ini.ship_contents[index] = "";
         obj_ini.ship_turrets[index] = 1;
@@ -336,7 +342,7 @@ function new_player_ship(type, start_loc = "home", new_name = "") {
         obj_ini.ship_wep[index][1] = "Weapons Battery";
         obj_ini.ship_wep_facing[index][1] = "most";
         obj_ini.ship_wep_condition[index][1] = "";
-        obj_ini.ship_capacity[index] = 100;
+        obj_ini.ship_capacity[index] = 200;
         obj_ini.ship_carrying[index] = 0;
         obj_ini.ship_contents[index] = "";
         obj_ini.ship_turrets[index] = 1;
@@ -358,7 +364,7 @@ function new_player_ship(type, start_loc = "home", new_name = "") {
         obj_ini.ship_wep[index][2] = "Weapons Battery";
         obj_ini.ship_wep_facing[index][2] = "most";
         obj_ini.ship_wep_condition[index][2] = "";
-        obj_ini.ship_capacity[index] = 50;
+        obj_ini.ship_capacity[index] = 100;
         obj_ini.ship_carrying[index] = 0;
         obj_ini.ship_contents[index] = "";
         obj_ini.ship_turrets[index] = 1;
@@ -369,34 +375,37 @@ function new_player_ship(type, start_loc = "home", new_name = "") {
 
         obj_ini.ship_class[index] = "Gloriana";
 
-        obj_ini.ship_hp[index] = 6000;
-        obj_ini.ship_maxhp[index] = 6000;
+        obj_ini.ship_hp[index] = 4800;
+        obj_ini.ship_maxhp[index] = 4800;
         obj_ini.ship_conditions[index] = "";
         obj_ini.ship_speed[index] = 25;
         obj_ini.ship_turning[index] = 60;
         obj_ini.ship_front_armour[index] = 12;
         obj_ini.ship_other_armour[index] = 12;
-        obj_ini.ship_weapons[index] = 8;
-        obj_ini.ship_shields[index] = 48;
+        obj_ini.ship_weapons[index] = 6;
+        obj_ini.ship_shields[index] = 32;
         obj_ini.ship_wep[index][1] = "Lance Battery";
         obj_ini.ship_wep_facing[index][1] = "most";
         obj_ini.ship_wep_condition[index][1] = "";
         obj_ini.ship_wep[index][2] = "Lance Battery";
         obj_ini.ship_wep_facing[index][2] = "most";
         obj_ini.ship_wep_condition[index][2] = "";
-        obj_ini.ship_wep[index][3] = "Lance Battery";
-        obj_ini.ship_wep_facing[index][3] = "most";
+        obj_ini.ship_wep[index][3] = "Plasma Cannon";
+        obj_ini.ship_wep_facing[index][3] = "front";
         obj_ini.ship_wep_condition[index][3] = "";
-        obj_ini.ship_wep[index][4] = "Plasma Cannon";
-        obj_ini.ship_wep_facing[index][4] = "front";
+        obj_ini.ship_wep[index][4] = "Thunderhawk Launch Bays";
+        obj_ini.ship_wep_facing[index][4] = "special";
         obj_ini.ship_wep_condition[index][4] = "";
-        obj_ini.ship_wep[index][5] = "Macro Bombardment Cannons";
-        obj_ini.ship_wep_facing[index][5] = "most";
+        obj_ini.ship_wep[index][5] = "Torpedo Tubes";
+        obj_ini.ship_wep_facing[index][5] = "front";
         obj_ini.ship_wep_condition[index][5] = "";
-        obj_ini.ship_capacity[index] = 1600;
+        obj_ini.ship_wep[index][6] = "Macro Bombardment Cannons";
+        obj_ini.ship_wep_facing[index][6] = "most";
+        obj_ini.ship_wep_condition[index][6] = "";
+        obj_ini.ship_capacity[index] = 2000;
         obj_ini.ship_carrying[index] = 0;
         obj_ini.ship_contents[index] = "";
-        obj_ini.ship_turrets[index] = 16;
+        obj_ini.ship_turrets[index] = 12;
     }
     return index;
 }
