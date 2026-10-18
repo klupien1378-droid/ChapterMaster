@@ -63,7 +63,7 @@ weapon_minrange[6] = 0;
 
 if (class == "Battle Barge") {
     turrets = 2;
-    weapons = 5;
+    weapons = 6;
     shield_size = 3;
     sprite_index = spr_ship_bb;
     weapon_facing[1] = "left"; // WEAPONS BATTERY
