@@ -139,10 +139,11 @@ if (class == "Gloriana") {
     weapon_facing[5] = "front"; // TORPEDO
     weapon_dam[5] = 12;
     weapon_range[5] = 1000;
-    weapon_cooldown[6] = 120; // volley several
+    weapon_cooldown[5] = 120; // volley several
     weapon_facing[6] = "most"; // MACRO BOMBARD
     weapon_dam[6] = 16;
     weapon_range[6] = 300;
+    weapon_cooldown[6] = 30;
 }
 if (class == "Strike Cruiser") {
     turrets = 1;
@@ -168,7 +169,7 @@ if (class == "Strike Cruiser") {
     weapon_facing[5] = "most";
     weapon_dam[5] = 12;
     weapon_range[5] = 300;
-    weapon_cooldown[4] = 30;
+    weapon_cooldown[5] = 30;
 }
 
 if (class == "Hunter") {
