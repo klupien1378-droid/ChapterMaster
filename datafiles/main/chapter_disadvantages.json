@@ -12,7 +12,7 @@
   {
     "name": "Depleted Gene-seed Stocks",
     "description": "Your Chapter has lost its gene-seed stocks in recent engagement. You start with no gene-seed.",
-    "points": 20
+    "points": 50
   },
   {
     "name": "Fresh Blood",
@@ -36,7 +36,7 @@
   {
     "name": "Sieged",
     "description": "A recent siege in aid of the Imperium has reduced the number of your Marines greatly. You retain a normal amount of equipment, but some is damaged.",
-    "points": 40,
+    "points": 80,
     "meta": ["Status"],
     "faction_disp_mods": [
       {
