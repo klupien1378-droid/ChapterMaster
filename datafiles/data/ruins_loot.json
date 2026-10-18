@@ -1,8 +1,8 @@
 {
     "1": [
         {
-            "max": 3,
-            "min": 1,
+            "max": 10,
+            "min": 2,
             "options": [
                 "Tartaros",
                 "Terminator Armour",
@@ -10,16 +10,18 @@
             ]
         },
         {
-            "max": 2,
-            "min": 1,
+            "max": 10,
+            "min": 2,
             "options": [
-                "Tigris Combi Bolter",
-                "Volkite Charger"
+                "Volkite Serpenta",
+                "Volkite Charger",
+				"Volkite Caliver",
+				"Volkite Culverin"
             ]
         },
         {
-            "max": 3,
-            "min": 1,
+            "max": 10,
+            "min": 2,
             "options": [
                 "Power Fist",
                 "Chainfist",
@@ -31,16 +33,16 @@
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 8,
+            "min": 1,
             "options": [
                 "Assault Cannon",
                 "Plasma Cannon"
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 8,
+            "min": 1,
             "options": [
                 "Company Standard",
                 "Narthecium",
@@ -49,8 +51,8 @@
             ]
         },
         {
-            "max": 3,
-            "min": 1,
+            "max": 6,
+            "min": 2,
             "options": [
                 "Storm Shield"
             ]
@@ -58,25 +60,29 @@
     ],
     "10": [
         {
-            "max": 3,
-            "min": 1,
+            "max": 10,
+            "min": 2,
             "options": [
                 "Tartaros",
                 "Terminator Armour",
-                "Cataphractii"
+                "Cataphractii",
+				"Artificer Armour"
             ]
         },
         {
-            "max": 2,
-            "min": 1,
+            "max": 8,
+            "min": 2,
             "options": [
-                "Tigris Combi Bolter",
-                "Volkite Charger"
+                "Volkite Serpenta",
+                "Volkite Charger",
+				"Volkite Caliver",
+				"Volkite Culverin"
+							
             ]
         },
         {
-            "max": 3,
-            "min": 1,
+            "max": 12,
+            "min": 2,
             "options": [
                 "Power Fist",
                 "Chainfist",
@@ -88,16 +94,16 @@
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 6,
+            "min": 1,
             "options": [
                 "Assault Cannon",
                 "Plasma Cannon"
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 10,
+            "min": 1,
             "options": [
                 "Company Standard",
                 "Narthecium",
@@ -106,8 +112,8 @@
             ]
         },
         {
-            "max": 3,
-            "min": 1,
+            "max": 6,
+            "min": 2,
             "options": [
                 "Storm Shield"
             ]
@@ -115,8 +121,8 @@
     ],
     "2": [
         {
-            "max": 3,
-            "min": 1,
+            "max": 10,
+            "min": 2,
             "options": [
                 "Tartaros",
                 "Terminator Armour",
@@ -124,16 +130,18 @@
             ]
         },
         {
-            "max": 2,
-            "min": 1,
+            "max": 10,
+            "min": 2,
             "options": [
-                "Tigris Combi Bolter",
-                "Volkite Charger"
+                "Volkite Serpenta",
+                "Volkite Charger",
+				"Volkite Caliver",
+				"Volkite Culverin"
             ]
         },
         {
-            "max": 3,
-            "min": 1,
+            "max": 12,
+            "min": 2,
             "options": [
                 "Power Fist",
                 "Chainfist",
@@ -145,16 +153,16 @@
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 8,
+            "min": 1,
             "options": [
                 "Assault Cannon",
                 "Plasma Cannon"
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 6,
+            "min": 1,
             "options": [
                 "Company Standard",
                 "Narthecium",
@@ -163,8 +171,8 @@
             ]
         },
         {
-            "max": 3,
-            "min": 1,
+            "max": 6,
+            "min": 2,
             "options": [
                 "Storm Shield"
             ]
@@ -172,41 +180,48 @@
     ],
     "3": [
         {
-            "max": 6,
+            "max": 12,
             "min": 3,
             "options": [
                 "MK3 Iron Armour",
                 "MK4 Maximus",
-                "MK5 Heresy"
+                "MK5 Heresy",
+				"MK6 Corvus"
             ]
         },
         {
-            "max": 3,
+            "max": 16,
             "min": 2,
             "options": [
                 "Phobos Bolter"
             ]
         },
         {
-            "max": 2,
-            "min": 1,
+            "max": 12,
+            "min": 2,
             "options": [
-                "Ryza Plasma Gun",
+                "Volkite Serpenta",
                 "Volkite Charger",
-                "Volkite Caliver"
+				"Volkite Caliver",
+				"Volkite Culverin",
+				"Ryza Plasma Pistol",
+				"Ryza Plasma Gun",
+				"Ryza Lascannon",
+				"Proteus Multi-Melta",
+				"Primus Melta Gun"
             ]
         },
         {
-            "max": 2,
-            "min": 1,
+            "max": 4,
+            "min": 2,
             "options": [
                 "Primus Melta Gun",
                 "Phaestos Flamer"
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 2,
+            "min": 1,
             "options": [
                 "Ryza Plasma Pistol",
                 "Phobos Bolt Pistol",
@@ -214,18 +229,21 @@
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 16,
+            "min": 1,
             "options": [
                 "Power Sword",
                 "Chain Axe",
                 "Power Axe",
-                "Power Fist"
+                "Power Fist",
+				"Power Mace",
+				"Power Scythe",
+				"Power Spear"
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 6,
+            "min": 1,
             "options": [
                 "Company Standard",
                 "Narthecium",
@@ -234,8 +252,8 @@
             ]
         },
         {
-            "max": 3,
-            "min": 1,
+            "max": 16,
+            "min": 2,
             "options": [
                 "Bionics"
             ]
@@ -243,7 +261,7 @@
     ],
     "4": [
         {
-            "max": 5,
+            "max": 14,
             "min": 3,
             "options": [
                 "MK3 Iron Armour",
@@ -252,31 +270,31 @@
             ]
         },
         {
-            "max": 3,
+            "max": 8,
             "min": 2,
             "options": [
                 "Mars Heavy Bolter"
             ]
         },
         {
-            "max": 2,
-            "min": 1,
+            "max": 8,
+            "min": 2,
             "options": [
                 "Mars Plasma Cannon",
                 "Volkite Culverin"
             ]
         },
         {
-            "max": 2,
-            "min": 1,
+            "max": 6,
+            "min": 2,
             "options": [
                 "Ryza Las Cannon",
                 "Cthon Auto Cannon"
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 4,
+            "min": 1,
             "options": [
                 "Ryza Plasma Pistol",
                 "Phobos Bolt Pistol",
@@ -284,8 +302,8 @@
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 8,
+            "min": 1,
             "options": [
                 "Power Sword",
                 "Chain Axe",
@@ -294,8 +312,8 @@
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 6,
+            "min": 1,
             "options": [
                 "Company Standard",
                 "Narthecium",
@@ -304,8 +322,8 @@
             ]
         },
         {
-            "max": 3,
-            "min": 1,
+            "max": 18,
+            "min": 2,
             "options": [
                 "Heavy Weapons Pack"
             ]
@@ -322,7 +340,7 @@
             ]
         },
         {
-            "max": 3,
+            "max": 6,
             "min": 2,
             "options": [
                 "Chainsword",
@@ -330,8 +348,8 @@
             ]
         },
         {
-            "max": 2,
-            "min": 1,
+            "max": 8,
+            "min": 2,
             "options": [
                 "Power Sword",
                 "Power Axe",
@@ -339,16 +357,16 @@
             ]
         },
         {
-            "max": 2,
-            "min": 1,
+            "max": 4,
+            "min": 2,
             "options": [
                 "Lightning Claws",
                 "Power Scythe"
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 2,
+            "min": 1,
             "options": [
                 "Ryza Plasma Pistol",
                 "Phobos Bolt Pistol",
@@ -356,16 +374,16 @@
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 2,
+            "min": 1,
             "options": [
                 "Primus Melta Gun",
                 "Phaestos Flamer"
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 2,
+            "min": 1,
             "options": [
                 "Company Standard",
                 "Narthecium",
@@ -374,8 +392,8 @@
             ]
         },
         {
-            "max": 3,
-            "min": 1,
+            "max": 6,
+            "min": 2,
             "options": [
                 "Serpha Jump Pack"
             ]
@@ -392,15 +410,15 @@
             ]
         },
         {
-            "max": 3,
+            "max": 6,
             "min": 2,
             "options": [
                 "Primus Melta Gun"
             ]
         },
         {
-            "max": 2,
-            "min": 1,
+            "max": 4,
+            "min": 2,
             "options": [
                 "Ryza Plasma Gun",
                 "Volkite Charger",
@@ -408,16 +426,16 @@
             ]
         },
         {
-            "max": 2,
-            "min": 1,
+            "max": 4,
+            "min": 2,
             "options": [
                 "Phobos Bolter",
                 "Phaestos Flamer"
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 2,
+            "min": 1,
             "options": [
                 "Ryza Plasma Pistol",
                 "Phobos Bolt Pistol",
@@ -425,8 +443,8 @@
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 8,
+            "min": 1,
             "options": [
                 "Power Sword",
                 "Chain Axe",
@@ -435,8 +453,8 @@
             ]
         },
         {
-            "max": 1,
-            "min": 0,
+            "max": 8,
+            "min": 1,
             "options": [
                 "Company Standard",
                 "Narthecium",
@@ -445,8 +463,8 @@
             ]
         },
         {
-            "max": 3,
-            "min": 1,
+            "max": 6,
+            "min": 2,
             "options": [
                 "Boarding Shield"
             ]
@@ -454,15 +472,16 @@
     ],
     "7": [
         {
-            "max": 1,
-            "min": 1,
+            "max": 6,
+            "min": 2,
             "options": [
-                "Contemptor Dreadnought"
+                "Contemptor Dreadnought",
+				"Dreadnought"
             ]
         },
         {
-            "max": 1,
-            "min": 1,
+            "max": 8,
+            "min": 2,
             "options": [
                 "Twin-linked Volkite Culverins",
                 "Heavy Conversion Beamer",
@@ -470,7 +489,7 @@
             ]
         },
         {
-            "max": 3,
+            "max": 6,
             "min": 3,
             "options": [
                 "Contemptor CCW"

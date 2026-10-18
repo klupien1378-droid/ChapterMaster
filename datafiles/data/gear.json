@@ -47,7 +47,7 @@
     "Iron Halo": {
         "abbreviation": "IrnHalo",
         "damage_resistance_mod": {
-            "artifact": 45,
+            "artifact": 50,
             "master_crafted": 40,
             "standard": 35
         },
@@ -87,7 +87,7 @@
             "force_1"
         ],
         "specials": {
-            "psychic_focus": 15
+            "psychic_focus": 25
         },
         "value": 100
     },
