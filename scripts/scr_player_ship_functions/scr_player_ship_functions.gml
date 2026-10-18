@@ -140,9 +140,9 @@ function new_player_ship_defaults() {
         array_push(ship_front_armour, 0);
         array_push(ship_other_armour, 0);
         array_push(ship_weapons, 0);
-        array_push(ship_wep, array_create(6, ""));
-        array_push(ship_wep_facing, array_create(6, ""));
-        array_push(ship_wep_condition, array_create(6, ""));
+        array_push(ship_wep, array_create(7, ""));
+        array_push(ship_wep_facing, array_create(7, ""));
+        array_push(ship_wep_condition, array_create(7, ""));
         array_push(ship_capacity, 0);
         array_push(ship_carrying, 0);
         array_push(ship_contents, "");
