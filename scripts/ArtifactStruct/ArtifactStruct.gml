@@ -328,23 +328,27 @@ function ArtifactStruct(_type_name = "", _tags = [], _identification_timer = 0, 
     /// @desc Returns whether the artifact can currently be identified: it must be at the home world or on a ship at the home world or a Battle Barge.
     /// @returns {Bool} true if identification is possible.
     static is_identifiable = function() {
-        var _resolved = __resolve_location();
-        if (_resolved.location_name == obj_ini.home_name) {
+    var _resolved = __resolve_location();
+
+    if (_resolved.location_name == obj_ini.home_name) {
+        return true;
+    }
+
+    if (_resolved.ship_id > -1) {
+        if (obj_ini.ship_location[_resolved.ship_id] == obj_ini.home_name) {
             return true;
         }
 
-        if (_resolved.ship_id > -1) {
-            if (obj_ini.ship_location[_resolved.ship_id] == obj_ini.home_name) {
-                return true;
-            }
+        var _ship_class = obj_ini.ship_class[_resolved.ship_id];
 
-            if (obj_ini.ship_class[_resolved.ship_id] == "Battle Barge") {
-                return true;
-            }
+        if (_ship_class == "Battle Barge" ||
+            _ship_class == "Gloriana") {
+            return true;
         }
+    }
 
-        return false;
-    };
+    return false;
+};
 
     /// @param {String} wanted_tag
     /// @returns {Bool} true if the artifact has the given tag.
