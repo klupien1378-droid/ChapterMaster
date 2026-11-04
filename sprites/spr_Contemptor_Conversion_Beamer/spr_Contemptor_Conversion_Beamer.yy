@@ -3,7 +3,7 @@
   "%Name":"spr_Contemptor_Conversion_Beamer",
   "bboxMode":0,
   "bbox_bottom":165,
-  "bbox_left":196,
+  "bbox_left":20,
   "bbox_right":283,
   "bbox_top":78,
   "collisionKind":1,
@@ -13,6 +13,8 @@
   "For3D":false,
   "frames":[
     {"$GMSpriteFrame":"v1","%Name":"cdc4c2e7-a824-4a45-8406-fe470c6eae31","name":"cdc4c2e7-a824-4a45-8406-fe470c6eae31","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"66bc8dec-7add-41be-87ee-ebeb5e8086a0","name":"66bc8dec-7add-41be-87ee-ebeb5e8086a0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4e427ead-9c58-4f06-820f-c1d07ae3db12","name":"4e427ead-9c58-4f06-820f-c1d07ae3db12","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -49,7 +51,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":1.0,
+    "length":3.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -73,6 +75,12 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cdc4c2e7-a824-4a45-8406-fe470c6eae31","path":"sprites/spr_Contemptor_Conversion_Beamer/spr_Contemptor_Conversion_Beamer.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"227c838d-d979-4091-a8ea-a4389830d2ac","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"66bc8dec-7add-41be-87ee-ebeb5e8086a0","path":"sprites/spr_Contemptor_Conversion_Beamer/spr_Contemptor_Conversion_Beamer.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"2f40b514-8954-444f-bed4-39fa3266227a","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4e427ead-9c58-4f06-820f-c1d07ae3db12","path":"sprites/spr_Contemptor_Conversion_Beamer/spr_Contemptor_Conversion_Beamer.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"ece31cd4-9414-4844-b459-c4b881580f12","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
