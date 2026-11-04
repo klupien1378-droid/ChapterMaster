@@ -555,7 +555,7 @@ global.modular_drawing_items = [
     },
     {
         sprite: spr_da_mk5_helm_crests,
-        cultures: ["Knightly"],
+        cultures: ["Knightly","Roman"],
         body_types: [0],
         armours: [
             "MK3 Iron Armour",
@@ -570,7 +570,7 @@ global.modular_drawing_items = [
     },
     {
         sprite: spr_da_mk7_helm_crests,
-        cultures: ["Knightly"],
+        cultures: ["Knightly","Roman"],
         body_types: [0],
         armours: [
             "MK7 Aquila",
@@ -583,6 +583,7 @@ global.modular_drawing_items = [
     },
     {
         sprite: spr_laurel_term,
+		cultures: ["Ultra","Roman"],
         armours: [
             "Terminator Armour",
             "Tartaros",
@@ -597,6 +598,7 @@ global.modular_drawing_items = [
     },
     {
         sprite: spr_laurel,
+		cultures: ["Ultra","Roman"],
         body_types: [0],
         roles: [
             eROLE.CAPTAIN,
@@ -670,7 +672,7 @@ global.modular_drawing_items = [
         ],
     },
     {
-        cultures: ["Knightly"],
+        cultures: ["Knightly","Roman"],
         sprite: spr_knightly_personal_livery,
         body_types: [0],
         assign_by_rank: 3,
@@ -753,7 +755,7 @@ global.modular_drawing_items = [
         armours: ["MK6 Corvus"],
     },
     {
-        cultures: ["Knightly"],
+        cultures: ["Knightly","Roman"],
         sprite: spr_knightly_robes,
         body_types: [0],
         position: "robe",
@@ -854,7 +856,7 @@ global.modular_drawing_items = [
         },
     },
     {
-        cultures: ["Knightly"],
+        cultures: ["Knightly","Roman"],
         sprite: spr_mk6_knightly_mouth_variants,
         body_types: [0],
         position: "mouth_variants",
@@ -1060,7 +1062,7 @@ global.modular_drawing_items = [
     },
     {
         sprite: spr_victrix_mouth,
-        cultures: ["Ultra"],
+        cultures: ["Ultra","Roman"],
         body_types: [0],
         roles: [eROLE.HONOURGUARD],
         position: "mouth_variants",
@@ -1145,7 +1147,7 @@ global.modular_drawing_items = [
         ],
     },
     {
-        cultures: ["Ultra"],
+        cultures: ["Ultra","Roman"],
         sprite: spr_ultra_tassels,
         body_types: [
             0,
@@ -1240,6 +1242,17 @@ global.modular_drawing_items = [
             "chest_fastening": "default_backpack_fastening",
         },
     },
+	{
+        sprite: spr_pack_conversion_beamer,
+        body_types: [0],
+        position: "backpack_augment",
+        equipped: {
+            "mobi": "Conversion Beamer Pack",
+        },
+        overides: {
+            "chest_fastening": "default_backpack_fastening",
+        },
+    },
     {
         sprite: spr_jump_pack_complex,
         shadows: spr_jump_pack_complex_shadow,
@@ -1258,6 +1271,14 @@ global.modular_drawing_items = [
         position: "backpack_augment",
         equipped: {
             "mobi": "Cyclone Missile System",
+        },
+    },
+	{
+        sprite: spr_term_conversion_beamer,
+        body_types: [2],
+        position: "backpack_augment",
+        equipped: {
+            "mobi": "Conversion Beamer Pack",
         },
     },
     {
@@ -2703,17 +2724,29 @@ global.weapon_visual_data = {
     "Mars Plasma Cannon": {
         base: {
             weapon_data: {
-                display_type: "ranged_twohand",
-                single_left_right_profile: true,
+                display_type: "terminator_ranged",
             },
-            body_types: [
-                0,
-                1,
-            ],
+            body_types: [2],
         },
         variants: [
             {
+                sprite: spr_weapon_mars_plasc_term,
+            },
+            {
+                weapon_data: {
+                    display_type: "ranged_twohand",
+                },
                 sprite: spr_weapon_mars_plasc,
+                body_types: [
+                    0,
+                    1,
+                ],
+            },
+            {
+                sprite: spr_dread_plasma_cannon,
+                shadows: spr_dread_plasma_cannon_shadow,
+                body_types: [3],
+                armours: ["Dreadnought"],
             },
         ],
     },
@@ -2721,17 +2754,29 @@ global.weapon_visual_data = {
     "Proteus Multi-Melta": {
         base: {
             weapon_data: {
-                display_type: "ranged_twohand",
-                single_left_right_profile: true,
+                display_type: "terminator_ranged",
             },
-            body_types: [
-                0,
-                1,
-            ],
+            body_types: [2],
         },
         variants: [
             {
+                sprite: spr_weapon_prot_mmlt_term,
+            },
+            {
+                weapon_data: {
+                    display_type: "ranged_twohand",
+                },
                 sprite: spr_weapon_prot_mmlt,
+                body_types: [
+                    0,
+                    1,
+                ],
+            },
+            {
+                sprite: spr_dread_plasma_cannon,
+                shadows: spr_dread_plasma_cannon_shadow,
+                body_types: [3],
+                armours: ["Dreadnought"],
             },
         ],
     },
@@ -2781,17 +2826,29 @@ global.weapon_visual_data = {
     "Ryza Lascannon": {
         base: {
             weapon_data: {
-                display_type: "ranged_twohand",
-                single_left_right_profile: true,
+                display_type: "terminator_ranged",
             },
-            body_types: [
-                0,
-                1,
-            ],
+            body_types: [2],
         },
         variants: [
             {
+                sprite: spr_weapon_lasca_term,
+            },
+            {
+                weapon_data: {
+                    display_type: "ranged_twohand",
+                },
                 sprite: spr_weapon_ryza_lasca,
+                body_types: [
+                    0,
+                    1,
+                ],
+            },
+            {
+                sprite: spr_dread_lascannon,
+                shadows: spr_dread_lascannon_shadow,
+                body_types: [3],
+                armours: ["Dreadnought"],
             },
         ],
     },
@@ -2799,17 +2856,29 @@ global.weapon_visual_data = {
     "Cthon Autocannon": {
         base: {
             weapon_data: {
-                display_type: "ranged_twohand",
-                single_left_right_profile: true,
+                display_type: "terminator_ranged",
             },
-            body_types: [
-                0,
-                1,
-            ],
+            body_types: [2],
         },
         variants: [
             {
+                sprite: spr_weapon_autocannon_term,
+            },
+            {
+                weapon_data: {
+                    display_type: "ranged_twohand",
+                },
                 sprite: spr_weapon_cthon_autocannon,
+                body_types: [
+                    0,
+                    1,
+                ],
+            },
+            {
+                sprite: spr_dread_autocannon,
+                shadows: spr_dread_autocannon_shadow,
+                body_types: [3],
+                armours: ["Dreadnought"],
             },
         ],
     },
@@ -2864,22 +2933,26 @@ global.weapon_visual_data = {
     },
     "Lascannon": {
         base: {
-            body_types: [
-                0,
-                1,
-            ],
             weapon_data: {
-                display_type: "ranged_twohand",
+                display_type: "terminator_ranged",
             },
+            body_types: [2],
         },
         variants: [
             {
-                sprite: spr_weapon_lasca,
+                sprite: spr_weapon_lasca_term,
             },
             {
                 weapon_data: {
-                    display_type: "dreadnought",
+                    display_type: "ranged_twohand",
                 },
+                sprite: spr_weapon_ryza_lasca,
+                body_types: [
+                    0,
+                    1,
+                ],
+            },
+            {
                 sprite: spr_dread_lascannon,
                 shadows: spr_dread_lascannon_shadow,
                 body_types: [3],
@@ -2888,6 +2961,25 @@ global.weapon_visual_data = {
         ],
     },
     "Close Combat Weapon": {
+        base: {
+            body_types: [3],
+            weapon_data: {
+                display_type: "dreadnought",
+            },
+            armours: ["Dreadnought"],
+        },
+        variants: [
+            {
+                sprite: spr_dread_claw,
+                shadows: spr_dread_claw_shadow,
+            },
+            {
+                sprite: spr_contemptor_CCW,
+                armours: ["Contemptor Dreadnought"],
+            },
+        ],
+    },
+	"Contemptor CCW": {
         base: {
             body_types: [3],
             weapon_data: {
@@ -2979,22 +3071,26 @@ global.weapon_visual_data = {
     },
     "Multi-Melta": {
         base: {
-            body_types: [
-                0,
-                1,
-            ],
             weapon_data: {
-                display_type: "ranged_twohand",
+                display_type: "terminator_ranged",
             },
+            body_types: [2],
         },
         variants: [
             {
-                sprite: spr_weapon_mmelta,
+                sprite: spr_weapon_mmelta_term,
             },
             {
                 weapon_data: {
-                    display_type: "dreadnought",
+                    display_type: "ranged_twohand",
                 },
+                sprite: spr_weapon_mmelta,
+                body_types: [
+                    0,
+                    1,
+                ],
+            },
+            {
                 sprite: spr_dread_plasma_cannon,
                 shadows: spr_dread_plasma_cannon_shadow,
                 body_types: [3],
@@ -3023,11 +3119,16 @@ global.weapon_visual_data = {
                 display_type: "dreadnought",
             },
         },
-        variants: [
+		variants: [
             {
                 sprite: spr_dread_plasma_cannon,
                 shadows: spr_dread_plasma_cannon_shadow,
             },
+            {
+                sprite: spr_Contemptor_Conversion_Beamer,
+                armours: ["Contemptor Dreadnought"],
+            },
+        
         ],
     },
     "Twin-linked Volkite Culverins": {
@@ -3037,10 +3138,16 @@ global.weapon_visual_data = {
                 display_type: "dreadnought",
             },
         },
-        variants: [
+		variants: [
+            {
+                sprite: spr_dread_plasma_cannon,
+                shadows: spr_dread_plasma_cannon_shadow,
+            },
             {
                 sprite: spr_Volkite_Culverins,
+                armours: ["Contemptor Dreadnought"],
             },
+        
         ],
     },
     "Heavy Conversion Beamer": {
@@ -3050,10 +3157,16 @@ global.weapon_visual_data = {
                 display_type: "dreadnought",
             },
         },
-        variants: [
+		variants: [
+            {
+                sprite: spr_dread_plasma_cannon,
+                shadows: spr_dread_plasma_cannon_shadow,
+            },
             {
                 sprite: spr_Contemptor_Conversion_Beamer,
+                armours: ["Contemptor Dreadnought"],
             },
+        
         ],
     },
     "Kheres Assault Cannon": {
@@ -3063,10 +3176,16 @@ global.weapon_visual_data = {
                 display_type: "dreadnought",
             },
         },
-        variants: [
+		variants: [
+            {
+                sprite: spr_dread_assault_cannon,
+                shadows: spr_dread_assault_cannon_shadow,
+            },
             {
                 sprite: spr_Contemptor_assault_cannon,
+                armours: ["Contemptor Dreadnought"],
             },
+        
         ],
     },
     "Bolt Pistol": {
@@ -3199,6 +3318,19 @@ global.weapon_visual_data = {
             },
         ],
     },
+	"CombiVolkite": {
+    base: {
+        weapon_data: {
+            display_type: "normal_ranged",
+            single_left_right_profile: true,
+        },
+    },
+    variants: [
+        {
+            sprite: spr_weapon_comvolk,
+        },
+    ],
+},
     "Combiflamer": {
         base: {
             weapon_data: {
@@ -3338,7 +3470,7 @@ global.weapon_visual_data = {
         },
         variants: [
             {
-                sprite: spr_weapon_plasma_cannon_term,
+                sprite: spr_weapon_grav_cannon_term,
             },
             {
                 weapon_data: {
@@ -3465,7 +3597,7 @@ global.weapon_visual_data = {
         ],
     },
     "Assault Chainfist": {
-        base: {
+		base: {
             weapon_data: {
                 display_type: "normal_fist",
                 arm_type: 1,
@@ -3479,8 +3611,16 @@ global.weapon_visual_data = {
             {
                 sprite: spr_weapon_chainfist_small,
             },
+            {
+                sprite: spr_weapon_chainfist,
+                shadows: spr_weapon_chainfist_shadows,
+                weapon_data: {
+                    display_type: "terminator_fist",
+                },
+                body_types: [2],
+            },
         ],
-    },
+     },
     "Heavy Thunder Hammer": {
         base: {
             weapon_data: {
@@ -3511,19 +3651,25 @@ global.weapon_visual_data = {
     "Autocannon": {
         base: {
             weapon_data: {
-                display_type: "melee_twohand",
-                single_left_right_profile: true,
+                display_type: "terminator_ranged",
             },
+            body_types: [2],
         },
         variants: [
             {
-                sprite: spr_weapon_autocannon2,
+                sprite: spr_weapon_autocannon_term,
             },
             {
                 weapon_data: {
-                    display_type: "dreadnought",
-                    single_left_right_profile: false,
+                    display_type: "ranged_twohand",
                 },
+                sprite: spr_weapon_autocannon2,
+                body_types: [
+                    0,
+                    1,
+                ],
+            },
+            {
                 sprite: spr_dread_autocannon,
                 shadows: spr_dread_autocannon_shadow,
                 body_types: [3],
@@ -3869,6 +4015,19 @@ global.weapon_visual_data = {
             },
         ],
     },
+	"Relic Spear": {
+    base: {
+        weapon_data: {
+            display_type: "melee_onehand",
+            single_left_right_profile: true,
+        },
+    },
+    variants: [
+        {
+            sprite: spr_weapon_relic_spear,
+        },
+    ],
+},
     "Wrist-Mounted Storm Bolter": {
         base: {
             weapon_data: {
