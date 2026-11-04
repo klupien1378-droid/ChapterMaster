@@ -88,6 +88,7 @@
                 "Chainfist",
                 "Power Mace",
                 "Relic Blade",
+				"Relic Spear",
                 "Power Spear",
                 "Lightning Claw",
                 "Power Scythe"
@@ -136,6 +137,7 @@
                 "Volkite Serpenta",
                 "Volkite Charger",
 				"Volkite Caliver",
+				"CombiVolkite",
 				"Volkite Culverin"
             ]
         },
@@ -204,6 +206,7 @@
                 "Volkite Charger",
 				"Volkite Caliver",
 				"Volkite Culverin",
+				"CombiVolkite",
 				"Ryza Plasma Pistol",
 				"Ryza Plasma Gun",
 				"Ryza Lascannon",
@@ -298,7 +301,8 @@
             "options": [
                 "Ryza Plasma Pistol",
                 "Phobos Bolt Pistol",
-                "Volkite Serpenta"
+                "Volkite Serpenta",
+				"CombiVolkite"
             ]
         },
         {
@@ -353,6 +357,7 @@
             "options": [
                 "Power Sword",
                 "Power Axe",
+				"Relic Spear",
                 "Power Fist"
             ]
         },
@@ -422,6 +427,7 @@
             "options": [
                 "Ryza Plasma Gun",
                 "Volkite Charger",
+				"CombiVolkite",
                 "Volkite Caliver"
             ]
         },

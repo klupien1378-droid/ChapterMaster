@@ -4,9 +4,9 @@
         "constitution": -1,
         "display_name": "Ancient",
         "flavour_text": "Truly Ancient. While their body may ache - skills and wisdom are to be respected",
-        "luck": 1,
+        "luck": 2,
         "strength": -1,
-        "weapon_skill": 3,
+        "weapon_skill": 5,
         "wisdom": 5
     },
     "beast_slayer": {
@@ -142,9 +142,9 @@
         "display_name": "Crafter",
         "effect": "provides more total forge points especially when assigned to a forge",
         "flavour_text": "Particularly skilled at building and making things, often improving their quality along the way",
-        "intelligence": 1,
+        "intelligence": 6,
         "technology": [
-            6,
+            12,
             1,
             "max"
         ]
@@ -216,7 +216,7 @@
     "favoured_by_the_warp": {
         "display_name": "Favoured By The Warp",
         "flavour_text": "Warp powers favour this marine for some reason",
-        "wisdom": 4
+        "wisdom": 12
     },
     "feet_floor": {
         "dexterity": -2,
@@ -281,7 +281,7 @@
     "great_luck": {
         "display_name": "Great Luck",
         "flavour_text": "Blessed by great luck",
-        "luck": 4
+        "luck": 6
     },
     "guardian": {
         "ballistic_skill": [
@@ -501,12 +501,12 @@
         "display_name": "Trained On Mars",
         "flavour_text": "Had the best instruction in the imperium on technology from the Tech Priests of Mars",
         "intelligence": [
-            5,
+            8,
             5,
             "max"
         ],
         "technology": [
-            10,
+            16,
             5,
             "max"
         ]
@@ -596,16 +596,16 @@
         ]
     },
     "paragon": {
-        "ballistic_skill": 10,
-        "charisma": 6,
-        "constitution": 12,
-        "dexterity": 10,
+        "ballistic_skill": 16,
+        "charisma": 12,
+        "constitution": 16,
+        "dexterity": 16,
         "display_name": "Paragon",
         "flavour_text": "Walks in the footsteps of the Primarchs of old",
-        "intelligence": 6,
-        "luck": 2,
-        "strength": 10,
-        "weapon_skill": 10
+        "intelligence": 12,
+        "luck": 8,
+        "strength": 16,
+        "weapon_skill": 16
     },
     "perfectionist": {
         "ballistic_skill": [
@@ -878,13 +878,13 @@
         ]
     },
     "tyrannic_vet": {
-        "ballistic_skill": 1,
-        "constitution": 1,
-        "dexterity": 1,
+        "ballistic_skill": 6,
+        "constitution": 6,
+        "dexterity": 6,
         "display_name": "Tyrannic War Veteran",
         "effect": "Increased lethality against tyranids",
         "flavour_text": "A veteran of the many wars against the Tyranid swarms",
-        "weapon_skill": 1,
+        "weapon_skill": 6,
         "wisdom": [
             2,
             3,
@@ -892,10 +892,10 @@
         ]
     },
     "very_hard_to_kill": {
-        "constitution": 15,
+        "constitution": 30,
         "display_name": "Very Hard To Kill",
         "flavour_text": "Possess toughness and luck unsurpassed by most",
-        "luck": 2
+        "luck": 4
     },
     "warp_tainted": {
         "display_name": "Warp Tainted",

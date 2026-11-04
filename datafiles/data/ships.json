@@ -1,22 +1,22 @@
 {
     "Battle Barge": {
         "renegade_buy": false,
-        "request_duration": 4,
+        "request_duration": 16,
         "value": 20000
     },
     "Gladius": {
         "renegade_buy": false,
-        "request_duration": 1,
+        "request_duration": 2,
         "value": 2250
     },
     "Hunter": {
         "renegade_buy": false,
-        "request_duration": 2,
+        "request_duration": 4,
         "value": 3000
     },
     "Strike Cruiser": {
         "renegade_buy": false,
-        "request_duration": 3,
+        "request_duration": 8,
         "value": 8000
     }
 }
