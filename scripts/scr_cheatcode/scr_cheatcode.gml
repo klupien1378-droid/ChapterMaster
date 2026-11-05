@@ -106,6 +106,99 @@ function scr_cheatcode(argument0) {
                 case "chaosfleetspawn":
                     spawn_chaos_warlord();
                     break;
+			case "spacehulk":
+    var _home = find_star_by_name(obj_ini.home_name);
+
+    if (!instance_exists(_home)) {
+        show_debug_message(
+            "SPACE HULK DEBUG: Chapter homeworld not found."
+        );
+
+        scr_popup(
+            "Space Hulk Debug",
+            "Unable to locate the Chapter homeworld.",
+            "",
+            ""
+        );
+        break;
+    }
+
+    var _spawn_x = _home.x + 90;
+    var _spawn_y = max(100, _home.y + 90);
+
+    // Avoid overlapping an existing star or Hulk.
+    var _valid = false;
+
+    repeat (30) {
+        var _nearest = instance_nearest(
+            _spawn_x,
+            _spawn_y,
+            obj_star
+        );
+
+        if (!instance_exists(_nearest)) {
+            _valid = true;
+            break;
+        }
+
+        if (point_distance(
+            _spawn_x,
+            _spawn_y,
+            _nearest.x,
+            _nearest.y
+        ) >= 70) {
+            _valid = true;
+            break;
+        }
+
+        _spawn_x = _home.x + irandom_range(-140, 140);
+        _spawn_y = max(
+            100,
+            _home.y + irandom_range(-140, 140)
+        );
+    }
+
+    if (!_valid) {
+        scr_popup(
+            "Space Hulk Debug",
+            "No suitable spawn location was found near the Chapter homeworld.",
+            "",
+            ""
+        );
+        break;
+    }
+
+    var _hulk = scr_create_space_hulk(
+        _spawn_x,
+        _spawn_y
+    );
+
+    scr_alert(
+        "red",
+        "space_hulk",
+        "The Space Hulk " + _hulk.name
+        + " has appeared near "
+        + _home.name + ".",
+        _spawn_x,
+        _spawn_y
+    );
+
+    scr_event_log(
+        "",
+        "Debug Space Hulk spawned near "
+        + _home.name + ".",
+        _home.name
+    );
+
+    show_debug_message(
+        "SPACE HULK DEBUG: Spawned "
+        + _hulk.name
+        + " at "
+        + string(_spawn_x)
+        + ", "
+        + string(_spawn_y)
+    );
+    break;
                 case "waaagh":
                     init_ork_waagh(true);
                     break;
