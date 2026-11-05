@@ -1246,26 +1246,45 @@ if (instance_exists(obj_ini)) {
 }
 
 // ** Sets the star for the chapter ? **
-instance_create(irandom_range(400, room_width - 400), irandom_range(400, room_height - 400), obj_star);
-var _number_of_systems = 100;
+// Generate sector star systems
+var _number_of_systems = 200;
+var _minimum_star_distance = 130;
+var _max_attempts = 50000;
+var _attempts = 0;
+
 mask_index = spr_star;
-while (instance_number(obj_star) < _number_of_systems) {
-    var xx = irandom_range(200, room_width - 150); // dictates how far away from the edge stars spawn
-    var yy = irandom_range(130, room_height - 130);
+
+// Create the first star
+instance_create(
+    irandom_range(400, room_width - 400),
+    irandom_range(400, room_height - 400),
+    obj_star
+);
+
+// Generate remaining stars
+while (instance_number(obj_star) < _number_of_systems
+    && _attempts < _max_attempts) {
+
+    _attempts++;
+
+    var xx = irandom_range(200, room_width - 150);
+    var yy = irandom_range(130, room_height - 160);
+
     var nearest_star = instance_nearest(xx, yy, obj_star);
-    var repeats = 0;
-    while (point_distance(xx, yy, nearest_star.x, nearest_star.y) < 130 && repeats < 100) {
-        xx = irandom_range(200, room_width - 150); // dictates how far away from the edge stars spawn
-        yy = irandom_range(130, room_height - 160);
-        repeats++;
-    }
-    if (repeats != 100) {
+
+    if (point_distance(xx, yy, nearest_star.x, nearest_star.y)
+        >= _minimum_star_distance) {
+
         if (!place_meeting(xx, yy, obj_star)) {
             instance_create(xx, yy, obj_star);
         }
     }
 }
+
 mask_index = -1;
+
+LOGGER.info("Generated " + string(instance_number(obj_star))
+    + " star systems after " + string(_attempts) + " attempts.");
 
 LOGGER.info("Set Fleet Type");
 fleet_type = "";
