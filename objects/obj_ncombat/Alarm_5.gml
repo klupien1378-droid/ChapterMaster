@@ -323,32 +323,62 @@ if ((fortified > 0) && (!instance_exists(obj_nfort)) && (reduce_fortification ==
 }
 
 if ((!defeat) && (battle_special == "space_hulk")) {
-    var enemy_power = 0, loot = 0, dicey = roll_dice_chapter(1, 100, "low");
+    var enemy_power = 0;
+    var loot = 0;
+    var dicey = roll_dice_chapter(1, 100, "low");
 
-    if (enemy == eFACTION.ORK || enemy == eFACTION.TYRANIDS || enemy == eFACTION.HERETICS) {
+    hulk_treasure = 0;
+
+    if (enemy == eFACTION.ORK ||
+        enemy == eFACTION.TYRANIDS ||
+        enemy == eFACTION.HERETICS) {
         enemy_power = p_data.add_forces(enemy, -1);
     }
 
-    part10 = "Space Hulk Exploration at ";
-    var ex = min(100, 100 - ((enemy_power - 1) * 20));
-    part10 += string(ex) + "%";
-    _newline = part10;
-    combat_log.push(_newline, eMSG_COLOR.YELLOW);
+    var loot_chance = clamp(
+        100 - (enemy_power * 20),
+        10,
+        100
+    );
 
-    if (dicey <= (enemy_power * 10)) {
-        loot = choose(1, 2, 3, 4);
-        if (enemy != eFACTION.CHAOS) {
+    part10 = "Space Hulk Exploration Chance: ";
+    part10 += string(loot_chance) + "%";
+    combat_log.push(part10, eMSG_COLOR.YELLOW);
+
+    if (dicey <= loot_chance) {
+        if (enemy == eFACTION.CHAOS) {
+            loot = choose(1, 2, 3, 4);
+        } else {
             loot = choose(1, 1, 2, 3);
         }
+
         hulk_treasure = loot;
-        if (loot > 1) {
-            _newline = "Valuable items recovered.";
-        }
+
         if (loot == 1) {
-            _newline = "Resources have been recovered.";
+            combat_log.push(
+                "Resources have been recovered.",
+                eMSG_COLOR.YELLOW
+            );
+        } else {
+            combat_log.push(
+                "Valuable items recovered.",
+                eMSG_COLOR.YELLOW
+            );
         }
-        combat_log.push(_newline, eMSG_COLOR.YELLOW);
+    } else {
+        combat_log.push(
+            "No valuable salvage was recovered.",
+            eMSG_COLOR.YELLOW
+        );
     }
+
+    show_debug_message(
+        "SPACE HULK: Enemy=" + string(enemy)
+        + " Remaining=" + string(enemy_power)
+        + " Chance=" + string(loot_chance)
+        + " Roll=" + string(dicey)
+        + " Treasure=" + string(hulk_treasure)
+    );
 }
 
 if (string_count("ruins", battle_special) > 0) {
