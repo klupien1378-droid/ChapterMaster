@@ -90,15 +90,41 @@ function scr_ruins_reward(_star_system, _pid_idx, _ruins) {
         var _pool_count = array_length(_pools);
 
         for (var i = 0; i < _pool_count; i++) {
-            /// @type {Struct.LootPool}
-            var _pool = _pools[i];
-            var _result = _pool.roll();
+    /// @type {Struct.LootPool}
+    var _pool = _pools[i];
+    var _result = _pool.roll();
 
-            if (_result != undefined) {
-                scr_add_item(_result.name, _result.count);
-                array_push(_display_parts, $"{_result.count}x {_result.name}");
+    if (_result != undefined) {
+        var _standard_count = 0;
+        var _master_count = 0;
+
+        // Roll quality separately for every recovered item.
+        for (var j = 0; j < _result.count; j++) {
+            var _quality_roll = irandom_range(1, 100);
+
+            if (_quality_roll <= 75) {
+                _standard_count++;
+            }
+            else {
+                _master_count++;
             }
         }
+
+        // Standard quality - 75%
+        if (_standard_count > 0) {
+            scr_add_item(_result.name, _standard_count, "standard");
+            array_push(_display_parts,
+                $"{_standard_count}x Standard {_result.name}");
+        }
+
+        // Master-Crafted quality - 25%
+        if (_master_count > 0) {
+            scr_add_item(_result.name, _master_count, "master_crafted");
+            array_push(_display_parts,
+                $"{_master_count}x Master-Crafted {_result.name}");
+        }
+    }
+}
 
         _popup.title = "Ancient Ruins: Gear";
         var _loot_str = (array_length(_display_parts) > 0) ? string_join_ext(", ", _display_parts) : "nothing of immediate value";
@@ -141,18 +167,18 @@ function scr_ruins_reward(_star_system, _pid_idx, _ruins) {
     var _loot_type = eLOOT_TYPE.REQUISITION;
 
     // 3. Loot Category Mapping
-    if (_dice > 35 && _dice <= 50) {
+    if (_dice > 15 && _dice <= 50) {
         _loot_type = eLOOT_TYPE.GEAR;
-    } else if (_dice > 50 && _dice <= 60) {
+    } else if (_dice > 50 && _dice <= 75) {
         _loot_type = eLOOT_TYPE.ARTIFACT;
-    } else if (_dice > 60 && _dice <= 70) {
-        _loot_type = eLOOT_TYPE.STC;
-    } else if (_dice > 70 && _dice <= 85) {
+    } else if (_dice > 75 && _dice <= 80) {
+        _loot_type = eLOOT_TYPE.GEAR;
+    } else if (_dice > 80 && _dice <= 90) {
         _loot_type = eLOOT_TYPE.WILD_CARD;
-    } else if (_dice > 85 && _dice <= 97) {
-        _loot_type = eLOOT_TYPE.BUNKER;
-    } else if (_dice > 97 && _dice <= 99) {
-        _loot_type = eLOOT_TYPE.FORTRESS;
+    } else if (_dice > 90 && _dice <= 95) {
+        _loot_type = eLOOT_TYPE.WILD_CARD;
+    } else if (_dice > 95 && _dice <= 99) {
+        _loot_type = eLOOT_TYPE.GEAR;
     } else if (_dice > 99) {
         _loot_type = eLOOT_TYPE.STARSHIP;
     }
@@ -173,7 +199,7 @@ function scr_ruins_reward(_star_system, _pid_idx, _ruins) {
     // 5. Reward Processing Dispatcher
     switch (_loot_type) {
         case eLOOT_TYPE.REQUISITION:
-            var _amount = (round(random_range(30, 60)) + 1) * 10;
+            var _amount = (round(random_range(30, 600)) + 1) * 10;
             obj_controller.requisition += _amount;
             _popup.title = "Ancient Ruins: Resources";
             _popup.text = $"My lord, your battle brothers have located several precious minerals and supplies. Everything was returned to the ship, granting {_amount} Requisition.";
@@ -220,7 +246,23 @@ function scr_ruins_reward(_star_system, _pid_idx, _ruins) {
             break;
     }
 
-    _ruins.ruins_explored();
+     _ruins.ruins_explored();
+
+    // Clean up the completed ruins mission when the reward popup closes.
+    // Gene-seed rewards already handle their own cleanup.
+    if (_loot_type != eLOOT_TYPE.GENE_SEED
+    && _loot_type != eLOOT_TYPE.FORTRESS) {
+
+        _popup.add_option({
+            str1: "Continue.",
+            choice_func: function() {
+                with (obj_ground_mission) {
+                    instance_destroy();
+                }
+                popup_default_close();
+            }
+        });
+    }
 }
 
 /// @param {Id.Instance.obj_popup} _popup The popup instance to populate.
@@ -234,7 +276,7 @@ function ancient_gene_lab_ruins_loot(_popup) {
             {
                 str1: "Add the gene-seed to chapter vaults.",
                 choice_func: function() {
-                    var _estimate = irandom_range(3, 15);
+                    var _estimate = irandom_range(15, 150);
                     text = $"{_estimate} gene-seed has been added to the chapter vaults.";
                     reset_popup_options();
                     obj_controller.gene_seed += _estimate;
@@ -269,6 +311,7 @@ function ancient_gene_lab_ruins_loot(_popup) {
             },
         ],
     };
+	_popup.add_option(_popup.pop_data.options);
 }
 
 /// @param {Id.Instance.obj_star} _star
@@ -307,7 +350,7 @@ function ancient_fortress_ruins_loot(_star, _planet, _ruins, _popup) {
             {
                 str1: "Salvage raw materials.",
                 choice_func: function() {
-                    var _requisition_gain = irandom_range(200, 500);
+                    var _requisition_gain = irandom_range(500, 5000);
                     text = $"The fortress was demolished for parts, yielding {_requisition_gain} requisition.";
                     obj_controller.requisition += _requisition_gain;
                     reset_popup_options();
@@ -315,4 +358,5 @@ function ancient_fortress_ruins_loot(_star, _planet, _ruins, _popup) {
             },
         ],
     };
+	_popup.add_option(_popup.pop_data.options);
 }
